@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  max-width: 900px;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -31,23 +31,20 @@ main {
 
 .post-item {
   margin: 30px 0;
-  border-bottom: 1px solid lightgray;
 }
 
 .post-item .date {
-  font-size: 14px;
+  margin-right: 10px;
 }
 
-
-
 a {
-  color: #428bca;
   text-decoration: none;
 }
 
 article {
   margin: 0 15%;
-  padding: 0 4% 8% 4%;
+  padding: 0 4%;
+  overflow: hidden;
 
   h1, h2, h3, h4, h5, h6{
     border-bottom: 1px solid #444;
@@ -71,6 +68,10 @@ article {
   .date {
     font-size: 12px;
     color: #999;
+  }
+
+  .err {
+    background: transparent !important;
   }
 }
 
