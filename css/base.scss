@@ -9,15 +9,38 @@ html, body {
 }
 
 header {
+  background: #f5f5f5;
+  border-bottom: 1px solid #eaeaea;
   padding: 10px 15px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #777;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  .rss {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
+  nav {
+    margin: 0 auto;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      border: none;
+    }
+
+    .logo {
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all 150ms ease-out;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
   }
 }
 
@@ -41,14 +64,26 @@ header {
 
 .post-item {
   margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .date {
+    margin-right: 10px;
+    color: #ccc;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 22px;
+  }
 }
 
-.post-item .date {
-  margin-right: 10px;
-}
 
 a {
   text-decoration: none;
+  border-bottom: 1px solid black;
+  color: inherit;
 }
 
 article {
@@ -67,6 +102,10 @@ article {
 
   p {
     line-height: 1.8;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   pre {

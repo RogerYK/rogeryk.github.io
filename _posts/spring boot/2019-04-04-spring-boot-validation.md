@@ -19,30 +19,33 @@ description: 参数校验是web开发中必不可少的一步，无论前端后�
 ## 使用Java 中Validation规范进行参数验证
 
 前面我们已经提到了，JSR 303 和 JSR 380中规定了Java 中的Validation规范，其中包含了一些常用的参数验证规则.下面的表格来自validation-api-2.0.0.Final.jar  
-Constraint  | 详细信息
-------------------------------|---------------------
-@AssertFalse | 该值必须为False
-@AssertTrue |该值必须为True
-@DecimalMax(value，inclusive) | 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 ，inclusive表示是否包含该值
-@DecimalMin(value，inclusive) | 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 ，inclusive表示是否包含该值
-@Digits | 限制必须为一个小数，且整数部分的位数不能超过integer，小数部分的位数不能超过fraction
-@Email | 该值必须为邮箱格式
-@Future | 被注释的元素必须是一个将来的日期
-@FutureOrPresent | 被注释的元素必须是一个现在或将来的日期
-@Max(value) | 被注释的元素必须是一个数字，其值必须小于等于指定的最大值
-@Min(value) | 被注释的元素必须是一个数字，其值必须大于等于指定的最小值
-@Negative | 该值必须小于0
-@NegativeOrZero | 该值必须小于等于0
-@NotBlank | 该值不为空字符串，例如“     ”
-@NotEmpty | 该值不为空字符串
-@NotNull | 该值不为Null
-@Null | 该值必须为Null
-@Past | 被注释的元素必须是一个过去的日期
-@PastOrPresent | 被注释的元素必须是一个过去或现在的日期
-@Pattern(regexp) | 匹配正则
-@Positive | 该值必须大于0
-@PositiveOrZero | 该值必须大于等于0
-@Size(min,max) | 数组大小必须在[min,max]这个区间
+  
+| Constraint  | 详细信息 |  
+| ----------- | ------- |  
+| @AssertFalse | 该值必须为False |   
+| @AssertTrue | 该值必须为True |  
+| @DecimalMax(value，inclusive) | 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 ，inclusive
+表示是否包含该值 |  
+| @DecimalMin(value，inclusive) | 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 ，inclusive
+表示是否包含该值 |  
+| @Digits | 限制必须为一个小数，且整数部分的位数不能超过integer，小数部分的位数不能超过fraction |  
+| @Email | 该值必须为邮箱格式 |  
+| @Future | 被注释的元素必须是一个将来的日期 |  
+| @FutureOrPresent | 被注释的元素必须是一个现在或将来的日期 |  
+| @Max(value) | 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 |  
+| @Min(value) | 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 |  
+| @Negative | 该值必须小于0 |  
+| @NegativeOrZero | 该值必须小于等于0 |  
+| @NotBlank | 该值不为空字符串，例如"  " |  
+| @NotEmpty | 该值不为空字符串 |  
+| @NotNull | 该值不为Null |  
+| @Null | 该值必须为Null |  
+| @Past | 被注释的元素必须是一个过去的日期 |  
+| @PastOrPresent | 被注释的元素必须是一个过去或现在的日期 |  
+| @Pattern(regexp) | 匹配正则 |  
+| @Positive | 该值必须大于0 |  
+| @PositiveOrZero | 该值必须大于等于0 |  
+| @Size(min,max) | 数组大小必须在[min,max]这个区间 |  
 
 其中Spring Validator和Hibernate Validator都实现了上述的规范，默认spring boot 2中已经集成了Hibernate validator。所以我们直接使用即可。例如我们有一个用户注册的接口。前端将用户的手机号和密码发送过来，我们对参数进行检验。  
 首先创建一个Form 类，如下

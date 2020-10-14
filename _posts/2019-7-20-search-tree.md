@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 从二叉树到B-树，B+树
-category: 数据结构
+category: data-structure
 tags: 数据结构
 description: 搜索树
 ---

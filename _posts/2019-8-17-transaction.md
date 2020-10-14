@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 数据库的事务支持
-category: 系统
+category: system
 tags: io
 description: 事务这个词你也许已经听说过很多次了，甚至对它的ACDI特性都很了解，但是你知道它底层是如何保存的吗
 ---
