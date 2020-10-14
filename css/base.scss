@@ -67,15 +67,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   .date {
     margin-right: 10px;
     color: #ccc;
   }
-
+  .title-wrap {
+    width: 500px;
+  }
+  @media screen and (max-width: 500px) {
+    .title-wrap {
+      min-width: 100%
+    }
+  }
   .title {
+    white-space: nowrap;
     font-weight: bold;
     font-size: 22px;
+    text-overflow: ellipsis;
   }
 }
 
