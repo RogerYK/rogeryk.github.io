@@ -76,7 +76,7 @@ func main() {
 ```
 Golang中不允许使用一个变量来限定数组长度, 这怎么办，总不能使用一个长度足够大的数组来处理所有情况吧。这时突然想到了golang
 中的反射，其中的```reflect.ArrayOf(count n, ele Type) Type```可以来获取一个长度为n
-的数组类型，然后就可以再```reflect.New(typ Type) Value```来在创建数组的值, 这样就可以创建一个长度为n的数组了。 
+的数组类型，然后就可以用```reflect.New(typ Type) Value```来在创建数组的值, 这样就可以创建一个长度为n的数组了。 
 代码如下:  
 ```go
 package main

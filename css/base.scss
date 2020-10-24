@@ -51,9 +51,9 @@ header {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   main {
-    max-width: 1024px;
+    max-width: 900px;
     margin: 0 auto;
   }
 }
@@ -78,7 +78,7 @@ header {
   }
   @media screen and (max-width: 500px) {
     .title-wrap {
-      min-width: 100%
+      min-width: 100%;
     }
   }
   .title {
@@ -86,23 +86,26 @@ header {
     font-weight: bold;
     font-size: 22px;
     text-overflow: ellipsis;
+    color: inherit;
   }
 }
 
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid black;
-  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 article {
   padding: 0 4%;
   overflow: hidden;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 900px) {
     margin: 0 auto;
-    width: 1024px;
+    width: 900px;
   }
 
   h1, h2, h3, h4, h5, h6{
